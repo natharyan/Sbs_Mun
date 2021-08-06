@@ -1,407 +1,552 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style3.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SBS Intra-School MUN</title>
-  </head>
-  <body>
-    <p id="committee-link"></p>
-    <nav>
-      <section id="navbar" class="section">
-        <div class="navbar">
-          <div class="navbar-container flex-container logo-container">
-            <div class="logo">
-	      <img src="https://i.imgur.com/p35NgAU.png" alt="">
-            </div>
-          </div>
-          <div class="navbar-container flex-container link-container">
-            <div class="nav-link active"><a href="#home">Home</a></div>
-            <div class="nav-link"><a href="#schedule">Schedule</a></div>
-            <div class="nav-link"><a href="#about">About MUN</a></div>
-            <div class="nav-link dropdown">
-              <a href="#committees">Commmittee <span class="fa fa-angle-down"></span></a>
-              <div class="dropdown-container">
-                <a href="unep.html">UNEP</a>
-                <a href="unsc.html">UNSC</a>
-                <a href="adhoc.html">Ad Hoc</a>
-                <a href="afet.html">AFET</a>
-                <a href="warcabinet.html">War Cabinet</a>
-              </div>
-            </div>
-            <div class="nav-link"><a href="#fourth-estate">Fourth Estate</a></div>
-          </div>
-          <div class="responsive-navbar">
-            <i class="fa fa-bars"></i>
-          </div>
-        </div>
-      </section>
-    </nav>
-    <div class="rnavbar-container">
-      <div class="rlink-container">
-        <div class="rnav-link"><a href="#home">Home</a></div>
-        <div class="rnav-link"><a href="#schedule">Schedule</a></div>
-        <div class="rnav-link"><a href="#addressals">About</a></div>
-        <div class="rnav-link"><a href="#committees">Committees</a></div>
-        <div class="rnav-link"><a href="#fourth-estate">Fourth Estate</a></div>
-      </div>
-    </div>
-
-    <header>
-      <section id="home" class="section">
-        <div class="home">
-          <div class="logo-overlap">
-            <img src="https://media.discordapp.net/attachments/836188893673685002/872901908170440714/IMG_08721.PNG?width=876&height=418" alt="">
-            
-
-        </div>
-      </section>
-    </header>
-    <div id="schedulenav"></div>
-    <section id="schedule" class="section">
-      <div class="schedule-container">
-        <div class="heading-container">
-          <span class="common-heading">Schedule</span>
-        </div>
-        <div class="schedule-content">
-          <div class="common-button">
-            <p>Use the link below to view the conference schedule:</p>
-    <h2>&nbsp;</h2>
-            <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #FFEACA;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 60%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #C84B31;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #C84B31;
-  color: white;
-}
-</style>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SBS Intra-School MUN</title>
 </head>
+
 <body>
-
-
-<button id="myBtn">Confrence Schedule</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>Confrence Schedule</h2>
-    </div>
-    <div class="modal-body">
-    <h2>&nbsp;</h2>
-    <h3>Friday, 6th August 2021</h3>
-    <p>Session 1 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 2:30 am - 4:30 pm</p>
-    <h1>&nbsp;</h1>
-    <h4>Saturday, 7th August 2021</h3>
-    <p>Session 2 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 9:00 am - 11:00 am</p>
-    <p>Session 3 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 11:30 am -&#160 1:30 pm</p>
-    <p>Session 4 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; 2:30 pm - 4:30 pm</p>
-    <p>Closing Ceremony &#160;&#160;&#160;&#160;&#160;&#160; 5:00 pm - 5:30 pm</h2>
-    <h2>&nbsp;</h2>
-    </div>
-    <div class="modal-footer">
-      <h3>&nbsp;</h3>
+  <p id="committee-link"></p>
+  <nav>
+    <section id="navbar" class="section">
+      <div class="navbar">
+        <div class="navbar-container flex-container logo-container">
+          <div class="logo">
+            <img src="https://i.imgur.com/p35NgAU.png" alt="">
+          </div>
+        </div>
+        <div class="navbar-container flex-container link-container">
+          <div class="nav-link active"><a href="#home">Home</a></div>
+          <div class="nav-link"><a href="#schedule">Schedule</a></div>
+          <div class="nav-link"><a href="#about">About MUN</a></div>
+          <div class="nav-link dropdown">
+            <a href="#committees">Commmittee <span class="fa fa-angle-down"></span></a>
+            <div class="dropdown-container">
+              <a href="unep.html">UNEP</a>
+              <a href="unsc.html">UNSC</a>
+              <a href="adhoc.html">Ad Hoc</a>
+              <a href="afet.html">AFET</a>
+              <a href="warcabinet.html">War Cabinet</a>
+            </div>
+          </div>
+          <div class="nav-link"><a href="#fourth-estate">Fourth Estate</a></div>
+        </div>
+        <div class="responsive-navbar">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </section>
+  </nav>
+  <div class="rnavbar-container">
+    <div class="rlink-container">
+      <div class="rnav-link"><a href="#home">Home</a></div>
+      <div class="rnav-link"><a href="#schedule">Schedule</a></div>
+      <div class="rnav-link"><a href="#addressals">About</a></div>
+      <div class="rnav-link"><a href="#committees">Committees</a></div>
+      <div class="rnav-link"><a href="#fourth-estate">Fourth Estate</a></div>
     </div>
   </div>
 
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+  <header>
+    <section id="home" class="section">
+      <div class="home">
+        <div class="logo-overlap">
+          <img
+            src="https://media.discordapp.net/attachments/836188893673685002/872901908170440714/IMG_08721.PNG?width=876&height=418"
+            alt="">
 
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-          </div>
         </div>
-      </div>
     </section>
-    <section id="about" class="section">
-      <div class="estate">
-        <div class="estate-image">
-          <div class="image-container">
-            <img src="https://media.discordapp.net/attachments/836188893673685002/872780590351523870/Hotpot1.png?width=627&height=418">
-          </div>
-        </div>
-        <div class="estate-content">
-          <span class="common-heading">About IntraSBSMUN 2021</span>
-          <div class="estate-text-container">
-            <p>Model United Nations has been an integral part of the learning experience at Step by Step school. Year after year senior school students have organized and conducted both inter-school and intra-school MUNs where students’ participation has grown over the years. Deliberation and debate are keenly followed by the members of the International Press. We are back with another edition of the IntraSBSMUN- this time with an enthusiastic middle school participating alongside the seniors.</p>
-            <div class="common-button">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  </header>
 
-    <section id="committees" class="section">
+  <section id="schedule" class="section">
+    <div class="schedule-container">
       <div class="heading-container">
-       <span class="common-heading">Committees</span>
-    <h3>&nbsp;</h3>
-        <body style="background-color: #FFEAC9;">
-          <link rel="stylesheet" href="./css/style1.css">
-<ul class="card-list">
-	
-	<li class="card">
-		<a class="card-image" href="unep.html" style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png);" data-image-full="https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png">
-			<img src="https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png" alt="Psychopomp" />
-		</a>
-		<a class="card-description" href="unep.html" target="_blank">
-			<h2>UNEP</h2>
-			<p>Wildlife Trafficking with Special Focus on India</p>
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="unsc.html" style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418);" data-image-full="https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418">
-			<img src="https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418" alt="let's go" />
-		</a>
-		<a class="card-description" href="unsc.html" target="_blank">
-			<h2>UNSC</h2>
-			<p>Veto Reform</p>
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="adhoc.html" style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418);" data-image-full="https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418">
-			<img src="https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418" alt="The Beautiful Game" />
-		</a>
-		<a class="card-description" href="adhoc.html" target="_blank">
-			<h2>Ad hoc Committee</h2>
-			<p>Israel-Palestine Issue with Special Emphasis on a Two-state solution</p>
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="afet.html" style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418);" data-image-full="https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418">
-			<img src="https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="afet.html" target="_blank">
-			<h2>AFET</h2>
-			<p>US Withdrawal from Afghanistan with Special Emphasis on Refugee Protection</p>
-		</a>
-	</li>
-	<li class="card">
-		<a class="card-image" href="warcabinet.html" style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418);" data-image-full="https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418">
-			<img src="https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="warcabinet.html" target="_blank">
-			<h2>Afghan Cabninet</h2>
-			<p>Countering Increasing Taliban Aggression Following the Withdrawal of US Forces</p>
-		</a>
-	</li>
-	
-</ul>
-<!-- partial -->
-  <script  src="./js/script1.js"></script>
-    </section>
+        <span class="common-heading">Schedule</span>
+      </div>
+      <div class="schedule-content">
+        <div class="common-button">
+          <p>Use the link below to view the conference schedule:</p>
+          <h2>&nbsp;</h2>
+          <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
 
-    <section id="fourth-estate" class="section">
-      <div class="estate">
-        <div class="estate-image">
-          <div class="image-container">
-            <img src="images/fourthestatelogo.png">
-          </div>
-        </div>
-        <div class="estate-content">
-          <span class="common-heading">Fourth Estate</span>
-          <div class="estate-text-container">
-<p><q>“The less you know, the more you believe.” ― Bono</q></p>
-<p>&nbsp;</p>
-<p>Words and illustrations have the ability to incite change: to impel the readers for action, to influence opinions and most importantly, to carry out unblemished and unbiased reports in the impressionable world of today. It is in the hands of members of the International Press to use their voice to its greatest capacity- to be desolating, domineering; pivotal. An integral part of the Model United Nations, each edition of the Fourth Estate brings to the general reader an understanding of all that is discussed and debated behind closed doors.</p>
-<p>&nbsp;</p>
-            <div class="common-button">
-              <button><a href="./docs/Fourth_Estate.pdf" target="_blank">Pre-Con</a></button>
-              <button><a href="index.html#fourth-estate" target="_blank">Day 1</a></button>
-              <button><a href="index.html#fourth-estate" target="_blank">Day 2</a></button>
+            /* The Modal (background) */
+            .modal {
+              display: none;
+              /* Hidden by default */
+              position: fixed;
+              /* Stay in place */
+              z-index: 1;
+              /* Sit on top */
+              padding-top: 100px;
+              /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%;
+              /* Full width */
+              height: 100%;
+              /* Full height */
+              overflow: auto;
+              /* Enable scroll if needed */
+              background-color: rgb(0, 0, 0);
+              /* Fallback color */
+              background-color: rgba(0, 0, 0, 0.4);
+              /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content {
+              position: relative;
+              background-color: #FFEACA;
+              margin: auto;
+              padding: 0;
+              border: 1px solid #888;
+              width: 60%;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              -webkit-animation-name: animatetop;
+              -webkit-animation-duration: 0.4s;
+              animation-name: animatetop;
+              animation-duration: 0.4s
+            }
+
+            /* Add Animation */
+            @-webkit-keyframes animatetop {
+              from {
+                top: -300px;
+                opacity: 0
+              }
+
+              to {
+                top: 0;
+                opacity: 1
+              }
+            }
+
+            @keyframes animatetop {
+              from {
+                top: -300px;
+                opacity: 0
+              }
+
+              to {
+                top: 0;
+                opacity: 1
+              }
+            }
+
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            .modal-header {
+              padding: 2px 16px;
+              background-color: #C84B31;
+              color: white;
+            }
+
+            .modal-body {
+              padding: 2px 16px;
+            }
+
+            .modal-footer {
+              padding: 2px 16px;
+              background-color: #C84B31;
+              color: white;
+            }
+          </style>
+          </head>
+
+          <body>
+
+
+            <button id="myBtn">Confrence Schedule</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Confrence Schedule</h2>
+                </div>
+                <div class="modal-body">
+                  <h2>&nbsp;</h2>
+                  <h3>Friday, 6th August 2021</h3>
+                  <p>Session 1
+                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    2:30 am - 4:30 pm</p>
+                  <h1>&nbsp;</h1>
+                  <h4>Saturday, 7th August 2021</h3>
+                    <p>Session 2
+                      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                      9:00 am - 11:00 am</p>
+                    <p>Session 3
+                      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                      11:30 am -&#160 1:30 pm</p>
+                    <p>Session 4
+                      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                      2:30 pm - 4:30 pm</p>
+                    <p>Closing Ceremony &#160;&#160;&#160;&#160;&#160;&#160; 5:00 pm - 5:30 pm</h2>
+                    <h2>&nbsp;</h2>
+                </div>
+                <div class="modal-footer">
+                  <h3>&nbsp;</h3>
+                </div>
+              </div>
+
             </div>
+
+            <script>
+              // Get the modal
+              var modal = document.getElementById("myModal");
+
+              // Get the button that opens the modal
+              var btn = document.getElementById("myBtn");
+
+              // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When the user clicks the button, open the modal 
+              btn.onclick = function () {
+                modal.style.display = "block";
+              }
+
+
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function (event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
+            </script>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section">
+    <div class="estate">
+      <div class="estate-image">
+        <div class="image-container">
+          <img
+            src="https://media.discordapp.net/attachments/836188893673685002/872780590351523870/Hotpot1.png?width=627&height=418">
+        </div>
+      </div>
+      <div class="estate-content">
+        <span class="common-heading">About IntraSBSMUN 2021</span>
+        <div class="estate-text-container">
+          <p>Model United Nations has been an integral part of the learning experience at Step by Step school. Year
+            after year senior school students have organized and conducted both inter-school and intra-school MUNs where
+            students’ participation has grown over the years. Deliberation and debate are keenly followed by the members
+            of the International Press. We are back with another edition of the IntraSBSMUN- this time with an
+            enthusiastic middle school participating alongside the seniors.</p>
+          <div class="common-button">
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="blank" class="section">
+  <section id="committees" class="section">
+    <div class="heading-container">
+      <span class="common-heading">Committees</span>
+      <h3>&nbsp;</h3>
 
-    </section>
+      <body style="background-color: #FFEAC9;">
+        <link rel="stylesheet" href="./css/style1.css">
+        <ul class="card-list">
 
-<link rel="stylesheet" href="css/css2/style3.css">
-<link rel="stylesheet" href="css/css2/responsive.css">
+          <li class="card">
+            <a class="card-image" href="unep.html"
+              style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png);"
+              data-image-full="https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png">
+              <img src="https://media.discordapp.net/attachments/836188893673685002/872786392181276692/unknown.png"
+                alt="Psychopomp" />
+            </a>
+            <a class="card-description" href="unep.html" target="_blank">
+              <h2>UNEP</h2>
+              <p>Wildlife Trafficking with Special Focus on India</p>
+            </a>
+          </li>
 
-</section>
+          <li class="card">
+            <a class="card-image" href="unsc.html"
+              style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418);"
+              data-image-full="https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418">
+              <img
+                src="https://media.discordapp.net/attachments/836188893673685002/872783727850311690/unknown.png?width=478&height=418"
+                alt="let's go" />
+            </a>
+            <a class="card-description" href="unsc.html" target="_blank">
+              <h2>UNSC</h2>
+              <p>Veto Reform</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </a>
+          </li>
 
-    <footer>
-       <section class="testimonial-style-one sec-pad dark-gray-bg">
-    <h3>&nbsp;</h3>
-    <div class="thm-container">
+          <li class="card">
+            <a class="card-image" href="adhoc.html"
+              style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418);"
+              data-image-full="https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418">
+              <img
+                src="https://media.discordapp.net/attachments/836188893673685002/872794637704773662/unknown.png?width=452&height=418"
+                alt="The Beautiful Game" />
+            </a>
+            <a class="card-description" href="adhoc.html" target="_blank">
+              <h2>Ad hoc Committee</h2>
+              <p>Israel-Palestine Issue with Special Emphasis on a Two-state solution</p>
+            </a>
+          </li>
+
+          <li class="card">
+            <a class="card-image" href="afet.html"
+              style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418);"
+              data-image-full="https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418">
+              <img
+                src="https://media.discordapp.net/attachments/836188893673685002/872793050517237822/unknown.png?width=473&height=418"
+                alt="Jane Doe" />
+            </a>
+            <a class="card-description" href="afet.html" target="_blank">
+              <h2>AFET</h2>
+              <p>US Withdrawal from Afghanistan with Special Emphasis on Refugee Protection</p>
+            </a>
+          </li>
+          <li class="card">
+            <a class="card-image" href="warcabinet.html"
+              style="background-image: url(https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418);"
+              data-image-full="https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418">
+              <img
+                src="https://media.discordapp.net/attachments/836188893673685002/872794307902447626/unknown.png?width=421&height=418"
+                alt="Jane Doe" />
+            </a>
+            <a class="card-description" href="warcabinet.html" target="_blank">
+              <h2>Afghan Cabninet</h2>
+              <p>Countering Increasing Taliban Aggression Following the Withdrawal of US Forces</p>
+            </a>
+          </li>
+
+        </ul>
+        <!-- partial -->
+        <script src="./js/script1.js"></script>
+  </section>
+
+  <section id="fourth-estate" class="section">
+    <div class="estate">
+      <div class="estate-image">
+        <div class="image-container">
+          <img src="images/fourthestatelogo.png">
+        </div>
+      </div>
+      <div class="estate-content">
+        <span class="common-heading">Fourth Estate</span>
+        <div class="estate-text-container">
+          <p><q>“The less you know, the more you believe.” ― Bono</q></p>
+          <p>&nbsp;</p>
+          <p>Words and illustrations have the ability to incite change: to impel the readers for action, to influence
+            opinions and most importantly, to carry out unblemished and unbiased reports in the impressionable world of
+            today. It is in the hands of members of the International Press to use their voice to its greatest capacity-
+            to be desolating, domineering; pivotal. An integral part of the Model United Nations, each edition of the
+            Fourth Estate brings to the general reader an understanding of all that is discussed and debated behind
+            closed doors.</p>
+          <p>&nbsp;</p>
+          <div class="common-button">
+            <button><a href="./docs/Fourth_Estate.pdf" target="_blank">Pre-Con</a></button>
+            <button><a href="index.html#fourth-estate" target="_blank">Day 1</a></button>
+            <button><a href="index.html#fourth-estate" target="_blank">Day 2</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blank" class="section">
+
+  </section>
+  <section id="schedule" class="section">
+    <div class="schedule-container">
+      <div class="heading-container">
+        <span class="common-heading">Special Thanks</span>
+      </div>
+      <div class="schedule-content">
+        <div class="common-button">
+          <p>Nadia Shahidi: Training of Cartoonists</p>
+          <p>Nandini Agarwal and Suryaansh Jain: Training of Delegates.</p>
+          <h2>&nbsp;</h2>
+          <link rel="stylesheet" href="css/css2/style3.css">
+          <link rel="stylesheet" href="css/css2/responsive.css">
+
+          <button id="myBtn1">USG-Conference Services</button>
+
+          <!-- The Modal -->
+          <div id="myModal1" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>USG-Conference Services</h2>
+              </div>
+              <div class="modal-body">
+                <h3>Overall Incharge</h3>
+                <p>Nadia Narain</p>
+                <h1>&nbsp;</h1>
+                <h3>United Nations Environment Programme</h3>
+                <p>Ananya Agarwal</p>
+                <p>Tanmay Sethi</p>
+                <h2>&nbsp;</h2>
+                <h3>United Nations Security Council</h3>
+                    <p>Shiv Khanna</p>
+                <h2>&nbsp;</h2>
+                <h3>Ad hoc Committee</h3>
+                  <p>Tanisha Garg</p>
+                <h2>&nbsp;</h2>
+                <h3>European Parliament's Committee on Foreign Affairs</h3>
+                  <p>Kaira Bhaskar</p>
+                  <p> Rhea Nanda</p>
+                <h2>&nbsp;</h2>
+                <h3>President Ashraf Ghani's War Cabinet</h3>
+                  <p>Myraa Ramchandani</p>
+                <h2>&nbsp;</h2>
+                  
+              </div>
+              <div class="modal-footer">
+                <h3>&nbsp;</h3>
+              </div>
+            </div>
+
+          </div>
+
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal1");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn1");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+  </section>
+
+  <footer>
+    <section class="testimonial-style-one sec-pad dark-gray-bg">
+      <h3>&nbsp;</h3>
+      <div class="thm-container">
         <div class="sec-title text-center">
         </div>
         <div class="testimonials-carousel-style-one owl-carousel owl-theme">
-            <div class="item">
-                <div class="single-testimonials-style-one">
-		    <!--<img src="https://media.discordapp.net/attachments/836188893673685002/866715009488388117/unknown.png" alt="Awesome Image">/-->
-                    <p><q>Humanitarian response, sustainable development, and sustaining peace are three sides of the same triangle.</q></p>
-                    <div class="name-box">
-                        <div class="img-box">
-                            <!--img src="img/spookay.png" alt="Awesome Image"/-->
-                        </div><!-- /.img-box -->
-                        <div class="text-box">
-                            <!--<h4>António Guterres</h4>/-->
-                        </div><!-- /.text-box -->
-                    </div><!-- /.name-box -->
-                </div><!-- /.single-testimonials-style-one -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="single-testimonials-style-one">
-                    <p><q>To live is to choose. But to choose well, you must know who you are and what you stand for, where you want to go and why you want to get there.</q></p>
-                    <div class="name-box">
-                        <div class="img-box">
-                            <!--img src="img/electro.jpg" alt="Awesome Image"/-->
-                        </div><!-- /.img-box -->
-                        <div class="text-box">
-                            <h4>Kofi Annan</h4>
-                        </div><!-- /.text-box -->
-                    </div><!-- /.name-box -->
-                </div><!-- /.single-testimonials-style-one -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="single-testimonials-style-one">
-                    <p><q>The United Nations is our one great hope for a peaceful and free world.</q></p>
-                    <div class="name-box">
-                        <div class="img-box">
-                            <!--img src="img/brian.jpg" alt="Awesome Image"/-->
-                        </div><!-- /.img-box -->
-                        <div class="text-box">
-                            <h4>Ralph J. Bunche</h4>
-                        </div><!-- /.text-box -->
-                    </div><!-- /.name-box -->
-                </div><!-- /.single-testimonials-style-one -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="single-testimonials-style-one">
-                    <p><q>The United Nations is an organizational body where people, through their Governments, come together; and it can be the only place where there can be a melting pot.</q></p>
-                    <div class="name-box">
-                        <div class="img-box">
-                            <!--img src="img/lucky.jpg" alt="Awesome Image"/-->
-                        </div><!-- /.img-box -->
-                        <div class="text-box">
-                            <h4>Asma Jahangir</h4>
-                        </div><!-- /.text-box -->
-                    </div><!-- /.name-box -->
-                </div><!-- /.single-testimonials-style-one -->
-            </div><!-- /.item -->
+          <div class="item">
+            <div class="single-testimonials-style-one">
+              <!--<img src="https://media.discordapp.net/attachments/836188893673685002/866715009488388117/unknown.png" alt="Awesome Image">/-->
+              <p><q>Humanitarian response, sustainable development, and sustaining peace are three sides of the same
+                  triangle.</q></p>
+              <div class="name-box">
+                <div class="img-box">
+                  <!--img src="img/spookay.png" alt="Awesome Image"/-->
+                </div><!-- /.img-box -->
+                <div class="text-box">
+                  <!--<h4>António Guterres</h4>/-->
+                </div><!-- /.text-box -->
+              </div><!-- /.name-box -->
+            </div><!-- /.single-testimonials-style-one -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="single-testimonials-style-one">
+              <p><q>To live is to choose. But to choose well, you must know who you are and what you stand for, where
+                  you want to go and why you want to get there.</q></p>
+              <div class="name-box">
+                <div class="img-box">
+                  <!--img src="img/electro.jpg" alt="Awesome Image"/-->
+                </div><!-- /.img-box -->
+                <div class="text-box">
+                  <h4>Kofi Annan</h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.name-box -->
+            </div><!-- /.single-testimonials-style-one -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="single-testimonials-style-one">
+              <p><q>The United Nations is our one great hope for a peaceful and free world.</q></p>
+              <div class="name-box">
+                <div class="img-box">
+                  <!--img src="img/brian.jpg" alt="Awesome Image"/-->
+                </div><!-- /.img-box -->
+                <div class="text-box">
+                  <h4>Ralph J. Bunche</h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.name-box -->
+            </div><!-- /.single-testimonials-style-one -->
+          </div><!-- /.item -->
+          <div class="item">
+            <div class="single-testimonials-style-one">
+              <p><q>The United Nations is an organizational body where people, through their Governments, come together;
+                  and it can be the only place where there can be a melting pot.</q></p>
+              <div class="name-box">
+                <div class="img-box">
+                  <!--img src="img/lucky.jpg" alt="Awesome Image"/-->
+                </div><!-- /.img-box -->
+                <div class="text-box">
+                  <h4>Asma Jahangir</h4>
+                </div><!-- /.text-box -->
+              </div><!-- /.name-box -->
+            </div><!-- /.single-testimonials-style-one -->
+          </div><!-- /.item -->
         </div><!-- /.testimonials-carousel-style-one -->
-    </div>
-    <h1>&nbsp;</h1>
-    <p><i class="fa fa-copyright"></i> Copyright <strong>SBSMUN 2021</strong>
-      <span class="credits"> · Design by Aryan Nath, Aabir Fauzan, Shauryaveer Chaudhry, Arhaan Garg </span>
-    </p>
-    <p><b><a href="https://stepbystep.school">Step By Step, Noida</a></b></p>
-    </footer>
-      </body>
-  <script src="/js/script9.js"></script>
-  <script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/committeescroll1.js"></script>
-  <script src="js/readmore.js"></script>
-  <script src="js/responsive.js"></script>
-  <script src="js/scrollcolour.js"></script>
-  <script src="js/scrollunderline.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/validate.js"></script>
-  <script src="js/js2/jquery.js"></script>
-  <script src="js/js2/bootstrap.min.js"></script>
-  <script src="js/js2/bootstrap-select.min.js"></script>
-  <script src="js/js2/jquery.validate.min.js"></script>
-  <script src="js/js2/owl.carousel.min.js"></script>
-  <script src="js/js2/isotope.js"></script>
-  <script src="js/js2/jquery.magnific-popup.min.js"></script>
-  <script src="js/js2/js2/waypoints.min.js"></script>
-  <script src="js/js2/jquery.counterup.min.js"></script>
-  <script src="js/js2/wow.min.js"></script>
-  <script src="js/js2/jquery.easing.min.js"></script>
-  <script src="js/js2/custom.js"></script>
+      </div>
+      <h1>&nbsp;</h1>
+      <p><i class="fa fa-copyright"></i> Copyright <strong>SBSMUN 2021</strong>
+        <span class="credits"> · Design by Aryan Nath, Aabir Fauzan, Shauryaveer Chaudhry, Arhaan Garg </span>
+      </p>
+      <p><b><a href="https://stepbystep.school">Step By Step, Noida</a></b></p>
+  </footer>
+</body>
+<script src="/js/script9.js"></script>
+<script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/committeescroll1.js"></script>
+<script src="js/readmore.js"></script>
+<script src="js/responsive.js"></script>
+<script src="js/scrollcolour.js"></script>
+<script src="js/scrollunderline.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/js2/jquery.js"></script>
+<script src="js/js2/bootstrap.min.js"></script>
+<script src="js/js2/bootstrap-select.min.js"></script>
+<script src="js/js2/jquery.validate.min.js"></script>
+<script src="js/js2/owl.carousel.min.js"></script>
+<script src="js/js2/isotope.js"></script>
+<script src="js/js2/jquery.magnific-popup.min.js"></script>
+<script src="js/js2/js2/waypoints.min.js"></script>
+<script src="js/js2/jquery.counterup.min.js"></script>
+<script src="js/js2/wow.min.js"></script>
+<script src="js/js2/jquery.easing.min.js"></script>
+<script src="js/js2/custom.js"></script>
 
 
 </html>
