@@ -1,0 +1,344 @@
+/* General */
+header {
+  background-color: black;
+  color: white;
+  padding: 5% 10%;
+}
+.special-heading-container {
+  padding: 5% 0 7% 0;
+  text-align: center;
+}
+.special-heading-container img {
+  width: 26%;
+}
+.heading-container {
+  padding: 0% 0 7% 0;
+}
+.common-heading {
+  font-size: 2.75vw;
+  font-family: Poppins;
+}
+.common-heading:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  background: #B01116;
+}
+.main-heading {
+  text-align: center;
+  font-size: 400%;
+  font-family: PoppinsBold;
+  margin: 3% 0;
+}
+.main-subheading {
+  text-align: center;
+  font-size: 250%;
+  font-family: Poppins;
+  display: inline-block;
+}
+.main-subheading:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: white;
+  animation: line-slide 1.5s ease-in-out forwards;
+}
+.main-subheading:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0;
+  top: 0;
+  background: white;
+  animation: line-slide 1.5s ease-in-out forwards;
+}
+.committee-logo {
+  width: 300px;
+  position: absolute;
+  bottom: -100px;
+  left: calc(50% - 150px);
+  z-index: 2;
+}
+.committee-logo img {
+  width: 300px;
+}
+.common-button button {
+  width: auto;
+  padding: 1% 2%;
+  color: #ffffff;
+  border: solid 2px #b01116;
+  background-color: #b01116;
+  font-family: PoppinsLight;
+  font-size: 80%;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.common-button button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #b01116;
+}
+
+#text {
+  /* background-color: #e6e6e6; */
+}
+.info-container {
+  padding: 5% 0;
+  border-bottom: solid 1px #e6e6e6;
+}
+.text-container {
+  font-family: Raleway;
+  text-align: justify;
+  width: 80%;
+  font-size: 125%;
+  padding: 2.5% 5%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pdf-container {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5% 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.matrix {
+  width: 47.5%;
+  float: left;
+  text-align: left;
+}
+.rl {
+  width: 47.5%;
+  float: right;
+  text-align: right;
+}
+
+/* .coming-soon {
+  width: 80%;
+  text-align: center;
+  margin: 5% auto;
+  font-family: Poppins;
+  font-size: 150%;
+} */
+
+/* Executive Board */
+.eb-member-container {
+	display: flex;
+  margin-bottom: 7.5%;
+  font-size: 17.5px;
+}
+.eb-member-container:last-child {
+  margin-bottom: 0;
+}
+.write-up {
+  margin-left: 2.5%;
+}
+.image-container {
+  margin: 2%;
+  text-align: center;
+}
+.image-container img {
+  object-fit: cover;
+  object-position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.name {
+  font-family: Raleway;
+  padding-top: 2%;
+  font-size: 125%;
+}
+.position {
+  padding: 1%;
+  font-family: RalewayThin;
+  font-size: 100%;
+  font-style: italic;
+}
+
+/* Animation */
+@keyframes line-slide {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .common-heading {
+    font-size: 200%;
+  }
+  .heading-container {
+    padding: 10% 0 14% 0;
+  }
+  .common-heading:before {
+    height: 1px;
+  }
+  header {
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+  }
+  .special-heading-container img {
+    width: 100%;
+  }
+  .main-heading {
+    font-size: 200%;
+  }
+  .main-subheading  {
+    font-size: 100%;
+  }
+  .main-subheading  {
+    font-size: 100%;
+  }
+  .main-subheading:before {
+    height: 1px;
+  }
+  .main-subheading:after {
+    height: 1px;
+  }
+  .common-button {
+    text-align: left;
+  }
+  .common-button button {
+    margin-bottom: 5%;
+  }
+  .text-container {
+    font-size: 120%;
+    padding: 2.5% 0;
+  }
+  /* .coming-soon {
+    font-size: 120%;
+    margin: 10% auto;
+  } */
+
+  .eb-member-container {
+  	display: flex;
+    flex-direction: column;
+    margin: 20% 0;
+    font-size: 17.5px;
+  }
+  .eb-member-container:first-child {
+    margin-top: 0;
+  }
+  .eb-member-container:last-child {
+    margin-bottom: 0;
+  }
+  .write-up {
+    margin-left: 0;
+  }
+  .image-container {
+    margin: 10% 0;
+    text-align: center;
+  }
+}
+body .button-effect a {
+  margin:25px 0px;
+  background-color: #b01116;
+  color: #fff;
+  font-family: Poppins;
+}
+
+/* button styles !!!YOU NEED THEM !!!ALSO YOU NEED TO ADD FONTWESOME */
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid black;
+  text-transform: capitalize;
+ /* background-color: - add your own background-color */
+  font-family: 'Roboto', sans-serif;
+ /* put your font-family */
+  font-size: 18px;
+  padding: 15px 0px;
+  width: 180px;
+  overflow: hidden;
+}
+/* effect-3 styles */
+.effect.effect-3 {
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-3:before {
+  content: "\f019";
+  font-family: FontAwesome;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.2s linear 0s;
+}
+.effect.effect-3:hover {
+  text-indent: -9999px;
+}
+.effect.effect-3:hover:before {
+  top: 0;
+  text-indent: 0;
+}
+
+.main-subheading {
+  text-align: center;
+  font-size: 250%;
+  font-family: Poppins;
+  display: inline-block;
+  animation: zoom 1.5s;
+}
+.main-subheading:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: white;
+  animation: line-slide 1.5s ease-in-out forwards;
+}
+.main-subheading:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0;
+  top: 0;
+  background: white;
+  animation: line-slide 1.5s ease-in-out forwards;
+}
+@keyframes line-slide {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@keyframes zoom {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
