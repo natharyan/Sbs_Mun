@@ -1,250 +1,284 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style3.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/committees.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/committees.css">
 
-    <title>SBS Intra-School MUN</title>
-  </head>
-  <style>
-      @import url('https://fonts.googleapis.com/css?family=Amaranth|Source+Sans+Pro&display=swap');
+  <title>SBS Intra-School MUN</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Amaranth|Source+Sans+Pro&display=swap');
 
-        body ul {
-            margin: 0;
-        }
-        body .center {
-            margin: 0 auto;
-            text-align: center;
-        }
-        body img {
-            width: 100%;
-        }
-        .main {
-            padding: 2em 0;
-        }
-        .main h1 {
-            color: #61d4d7;
-            font-family: Poppins;
-            line-height: 3em;
-        }
-        .main h3 {
-            color: black;
-            font-family: Poppins;
-        }
-        .main p {
-            color: black;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.4em;
-        }
-        .main .timeline {
-            position: relative;
-        }
-        .main .timeline:before {
-            background: grey;
-            content: '';
-            height: 100%;
-            left: 40px;
-            position: absolute;
-            transform: translateX(-50%);
-            width: 4px;
-        }
-        .main .timeline .timeline-item {
-            clear: both;
-            list-style-type: none;
-            padding: 0 30px;
-            position: relative;
-        }
-        .main .timeline .timeline-item:before {
-            background: #b01116;
-            border-radius: 50%;
-            content: '';
-            height: 20px;
-            left: 0%;
-            position: absolute;
-            transform: translateX(-50%);
-            width: 20px;
-        }
-        .main .timeline .timeline-item .timeline-content {
-            background: #fff;
-            border: 2px solid black;
-            padding: 1em;
-            width: 70%;
-        }
-        .main .timeline .timeline-item .timeline-content h3, .main .timeline .timeline-item .timeline-content p, .main .timeline .timeline-item .timeline-content button {
-            margin: 20px;
-        }
-        .main .timeline .timeline-item:nth-child(even) .timeline-content {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .main .timeline .timeline-item:nth-child(2):before {
-            background: #b01116;
-        }
-        .main .timeline .timeline-item:nth-child(2) .timeline-content {
-            background: #fff;
-            border: 2px solid black;
-        }
-        .main .timeline .timeline-item:nth-child(3):before {
-            background: #b01116;
-        }
-        .main .timeline .timeline-item:nth-child(3) .timeline-content {
-            background: #fff;
-            border: 2px solid black;
-        }
-        .main .timeline .timeline-item:nth-child(4):before {
-            background: #b01116;
-        }
-        .main .timeline button {
-            background: #fff;
-            border: 2px solid #fff;
-            color: #656565;
-            font-weight: 500;
-            padding: 10px;
-            transition: all 0.3s;
-        }
-        .main .timeline button:hover {
-            background: #fff;
-            border: 2px solid #656565;
-        }
-        @media screen and (max-width: 968px) {
-            .main .timeline {
-                margin: 0 0 0 10px;
-            }
-            .main .timeline:before {
-                left: 40px;
-            }
-            .main .timeline .timeline-item:before {
-                left: 0;
-            }
-            .main .timeline .timeline-item .timeline-content:nth-child(1) {
-                margin: 2em 0;
-                width: 100%;
-            }
-            .main .timeline .timeline-item .timeline-content:nth-child(2) {
-                margin: 2em 0;
-                width: 100%;
-            }
-            .main .timeline .timeline-item .timeline-content:nth-child(1) {
-                margin: 2em 0 0 0;
-                width: 100%;
-            }
-            .main .timeline .timeline-item .timeline-content:nth-child(4) {
-                margin: 2em 0;
-                width: 100%;
-            }
+  body ul {
+    margin: 0;
+  }
 
-            .main .timeline .timeline-item:nth-child(even) .timeline-content {
-                float: initial;
-            }
-        }
-        
-  </style>
-  <body>
-    <p id="committee-link"></p>
-    <nav>
-      <section id="navbar" class="section">
-        <div class="navbar">
-          <div class="navbar-container flex-container logo-container">
-            <div class="logo">
-              <img src="https://i.imgur.com/p35NgAU.png" alt="">
-            </div>
-          </div>
-          <div class="navbar-container flex-container link-container">
-            <div class="nav-link"><a href="index.html">Home</a></div>
-            <div class="nav-link"><a href="index.html">Schedule</a></div>
-            <div class="nav-link"><a href="index.html">About MUN</a></div>
-            <div class="nav-link active dropdown">
-              <a href="#committees">Commmittee <span class="fa fa-angle-down"></span></a>
-              <div class="dropdown-container">
-                <a href="unep.html">UNEP</a>
-                <a href="unsc.html">UNSC</a>
-                <a href="adhoc.html">Ad Hoc</a>
-                <a href="afet.html">AFET</a>
-                <a href="warcabinet.html">War Cabinet</a>
-              </div>
-            </div>
-            <div class="nav-link"><a href="#fourth-estate">Fourth Estate</a></div>
-          </div>
-          <div class="responsive-navbar">
-            <i class="fa fa-bars"></i>
+  body .center {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  body img {
+    width: 100%;
+  }
+
+  .main {
+    padding: 2em 0;
+  }
+
+  .main h1 {
+    color: #61d4d7;
+    font-family: Poppins;
+    line-height: 3em;
+  }
+
+  .main h3 {
+    color: black;
+    font-family: Poppins;
+  }
+
+  .main p {
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+
+  .main .timeline {
+    position: relative;
+  }
+
+  .main .timeline:before {
+    background: grey;
+    content: '';
+    height: 100%;
+    left: 40px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 4px;
+  }
+
+  .main .timeline .timeline-item {
+    clear: both;
+    list-style-type: none;
+    padding: 0 30px;
+    position: relative;
+  }
+
+  .main .timeline .timeline-item:before {
+    background: #b01116;
+    border-radius: 50%;
+    content: '';
+    height: 20px;
+    left: 0%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 20px;
+  }
+
+  .main .timeline .timeline-item .timeline-content {
+    background: #fff;
+    border: 2px solid black;
+    padding: 1em;
+    width: 70%;
+  }
+
+  .main .timeline .timeline-item .timeline-content h3,
+  .main .timeline .timeline-item .timeline-content p,
+  .main .timeline .timeline-item .timeline-content button {
+    margin: 20px;
+  }
+
+  .main .timeline .timeline-item:nth-child(even) .timeline-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main .timeline .timeline-item:nth-child(2):before {
+    background: #b01116;
+  }
+
+  .main .timeline .timeline-item:nth-child(2) .timeline-content {
+    background: #fff;
+    border: 2px solid black;
+  }
+
+  .main .timeline .timeline-item:nth-child(3):before {
+    background: #b01116;
+  }
+
+  .main .timeline .timeline-item:nth-child(3) .timeline-content {
+    background: #fff;
+    border: 2px solid black;
+  }
+
+  .main .timeline .timeline-item:nth-child(4):before {
+    background: #b01116;
+  }
+
+  .main .timeline button {
+    background: #fff;
+    border: 2px solid #fff;
+    color: #656565;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+
+  .main .timeline button:hover {
+    background: #fff;
+    border: 2px solid #656565;
+  }
+
+  @media screen and (max-width: 968px) {
+    .main .timeline {
+      margin: 0 0 0 10px;
+    }
+
+    .main .timeline:before {
+      left: 40px;
+    }
+
+    .main .timeline .timeline-item:before {
+      left: 0;
+    }
+
+    .main .timeline .timeline-item .timeline-content:nth-child(1) {
+      margin: 2em 0;
+      width: 100%;
+    }
+
+    .main .timeline .timeline-item .timeline-content:nth-child(2) {
+      margin: 2em 0;
+      width: 100%;
+    }
+
+    .main .timeline .timeline-item .timeline-content:nth-child(1) {
+      margin: 2em 0 0 0;
+      width: 100%;
+    }
+
+    .main .timeline .timeline-item .timeline-content:nth-child(4) {
+      margin: 2em 0;
+      width: 100%;
+    }
+
+    .main .timeline .timeline-item:nth-child(even) .timeline-content {
+      float: initial;
+    }
+  }
+</style>
+
+<body>
+  <p id="committee-link"></p>
+  <nav>
+    <section id="navbar" class="section">
+      <div class="navbar">
+        <div class="navbar-container flex-container logo-container">
+          <div class="logo">
+            <img src="images/navimage.png" alt="">
           </div>
         </div>
-      </section>
-    </nav>
-    <div class="rnavbar-container">
-      <div class="rlink-container">
-        <div class="rnav-link"><a href="index.html">Home</a></div>
-        <div class="rnav-link"><a href="index.html">Schedule</a></div>
-        <div class="rnav-link"><a href="index.html">About</a></div>
-        <div class="rnav-link"><a href="index.html">Committees</a></div>
-        <div class="rnav-link"><a href="index.html">Fourth Estate</a></div>
+        <div class="navbar-container flex-container link-container">
+          <div class="nav-link"><a href="index.html">Home</a></div>
+          <div class="nav-link"><a href="index.html">Schedule</a></div>
+          <div class="nav-link"><a href="index.html">About MUN</a></div>
+          <div class="nav-link active dropdown">
+            <a href="#committees">Commmittee <span class="fa fa-angle-down"></span></a>
+            <div class="dropdown-container">
+              <a href="unep.html">UNEP</a>
+              <a href="unsc.html">UNSC</a>
+              <a href="adhoc.html">Ad Hoc</a>
+              <a href="afet.html">AFET</a>
+              <a href="warcabinet.html">War Cabinet</a>
+            </div>
+          </div>
+          <div class="nav-link"><a href="#fourth-estate">Fourth Estate</a></div>
+        </div>
+        <div class="responsive-navbar">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </section>
+  </nav>
+  <div class="rnavbar-container">
+    <div class="rlink-container">
+      <div class="rnav-link"><a href="index.html">Home</a></div>
+      <div class="rnav-link"><a href="index.html">Schedule</a></div>
+      <div class="rnav-link"><a href="index.html">About</a></div>
+      <div class="rnav-link"><a href="index.html">Committees</a></div>
+      <div class="rnav-link"><a href="index.html">Fourth Estate</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="special-heading-container">
+      <img src="/images/warcabinetlogo.JPG" style="border-radius: 200px;">
+      <p class="main-heading">War Cabinet</p>
+      <p class="main-subheading">Ashraf Ghani's War Cabinet</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="estate" style="padding-bottom: 0px;">
+      <div class="estate-content" style="width: 100%;">
+        <span class="common-heading">About</span>
+        <div class="estate-text-container" style="margin-top: 5%;">
+          <p>President Ashraf Ghani’s War Cabinet is a continuous crisis committee (CCC) part of a joint
+            crisis committee (JCC). The full duration of committee will involve crises throughout,
+            ranging from Taliban attacks on government structures, to persecution of international peace
+            workers, and many other events that will test the mettle of the delegates. This committee is a
+            war cabinet enabled with executive presidential powers vested by the Constitution of
+            Afghanistan.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <header>
-      <div class="special-heading-container">
-        <img src="/images/warcabinetlogo.JPG" style="border-radius: 200px;">
-        <p class="main-heading">War Cabinet</p>
-        <p class="main-subheading">Ashraf Ghani's War Cabinet</p>
-      </div>
-    </header>
-
-    <section class="section">
-      <div class="estate" style="padding-bottom: 0px;">
-        <div class="estate-content" style="width: 100%;">
-          <span class="common-heading">About</span>
-          <div class="estate-text-container" style="margin-top: 5%;">
-            <p>President Ashraf Ghani’s War Cabinet is a continuous crisis committee (CCC) part of a joint
-              crisis committee (JCC). The full duration of committee will involve crises throughout,
-              ranging from Taliban attacks on government structures, to persecution of international peace
-              workers, and many other events that will test the mettle of the delegates. This committee is a
-              war cabinet enabled with executive presidential powers vested by the Constitution of
-              Afghanistan.</p>
+  <section class="section">
+    <div class="estate" style="padding-top: 100px;">
+      <div class="estate-content" style="width: 100%;">
+        <span class="common-heading">Agenda</span>
+        <div class="estate-text-container" style="margin-top: 5%;">
+          <p>The rapidly deteriorating situation in Afghanistan has left the fate of 40 million people hanging in
+            the balance as a relentless power struggle ensues. With the withdrawal of the forces of the
+            United States, a vacuum is left in the country and the government has lost its strongest pillar of
+            support; as a result, the Taliban is conducting rapid incursions into government territory and
+            human rights violations abound. In this Joint Crisis Committee with the European Parliament
+            Committee on Foreign Affairs, delegates will be expected to arrive at instantaneous inventive
+            solutions to an onslaught of crises as part of President Ashraf Ghani’s War Cabinet, with the
+            aim to stop the refugee exodus and arrive at long-term solutions to secure the peace, security,
+            and welfare of the Afghan people.</p>
+          <div class="common-button">
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-        <div class="estate" style="padding-top: 100px;">
-            <div class="estate-content" style="width: 100%;">
-            <span class="common-heading">Agenda</span>
-            <div class="estate-text-container" style="margin-top: 5%;">
-                <p>The rapidly deteriorating situation in Afghanistan has left the fate of 40 million people hanging in
-                  the balance as a relentless power struggle ensues. With the withdrawal of the forces of the
-                  United States, a vacuum is left in the country and the government has lost its strongest pillar of
-                  support; as a result, the Taliban is conducting rapid incursions into government territory and
-                  human rights violations abound. In this Joint Crisis Committee with the European Parliament
-                  Committee on Foreign Affairs, delegates will be expected to arrive at instantaneous inventive
-                  solutions to an onslaught of crises as part of President Ashraf Ghani’s War Cabinet, with the
-                  aim to stop the refugee exodus and arrive at long-term solutions to secure the peace, security,
-                  and welfare of the Afghan people.</p>
-                <div class="common-button">
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section" style="background-color: #faf1e6;">
-        <div class="estate" style="padding-top: 100px;padding-bottom: 0px;">
-            <div class="estate-content" style="width: 100%;">
-            <span class="common-heading">Executive Board</span>
-            </div>
-        </div>
-        <h3>&nbsp;</h3>
-        <div class="container main">
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <div class="timeline-content" style="padding-bottom: 50px;">
+  <section class="section" style="background-color: #faf1e6;">
+    <div class="estate" style="padding-top: 100px;padding-bottom: 0px;">
+      <div class="estate-content" style="width: 100%;">
+        <span class="common-heading">Executive Board</span>
+      </div>
+    </div>
+    <h3>&nbsp;</h3>
+    <div class="container main">
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-content" style="padding-bottom: 50px;">
+            <p><b>Arya Goyal:</b> Chair</p>
+            <p><b>Tanisha Rungta:</b> Vice-Chair</p>
+            <p><b>Neelansh Agarwal:</b> Rapporteur</p>
+            <!--
                       <div class="eb-member-container">
 
                         <div class="image-container">
@@ -268,74 +302,76 @@
                               high as can be- the fate of your country lies firmly in your hands.</p>
                         </div>
                     </div>
-                    </div>
-                </li>
-                
-                <li class="timeline-item">
-                </li>
-            </ul>
-        </div>
-
-
-
-        <body style="background-color: #FFEAC9;">
-          <link rel="stylesheet" href="./css/style1.css">
-            
-<!-- partial -->
-  <script  src="./js/script1.js"></script>
-    </section>
-
-    <section class="section">
-      <div class="estate">
-        <div class="estate-content">
-          <span class="common-heading">Resources</span>
-          <div class="container">
-            <div class="button-effect">
-              <a class="effect effect-3" href="images/WarCabinet_BG.pdf" title="Background Guide" download>Background Guide</a>
-            </div>
-            
+                    -->
           </div>
+        </li>
+
+        <li class="timeline-item">
+        </li>
+      </ul>
+    </div>
+
+
+
+    <body style="background-color: #FFEAC9;">
+      <link rel="stylesheet" href="./css/style1.css">
+
+      <!-- partial -->
+      <script src="./js/script1.js"></script>
+  </section>
+
+  <section class="section">
+    <div class="estate">
+      <div class="estate-content">
+        <span class="common-heading">Resources</span>
+        <div class="container">
+          <div class="button-effect">
+            <a class="effect effect-3" href="images/WarCabinet_BG.pdf" title="Background Guide" download>Background
+              Guide</a>
+          </div>
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="blank" class="section">
+  <section id="blank" class="section">
 
-    </section>
+  </section>
 
-<link rel="stylesheet" href="css/css2/style3.css">
-<link rel="stylesheet" href="css/css2/responsive.css">
+  <link rel="stylesheet" href="css/css2/style3.css">
+  <link rel="stylesheet" href="css/css2/responsive.css">
 
-</section>
+  </section>
 
-<footer>
-  <p><i class="fa fa-copyright"></i> Copyright <strong>SBSMUN 2021</strong>
-    <span class="credits"> · Design by Aryan Nath, Aabir Fauzan, Shauryaveer Chaudhry, Arhaan Garg </span>
-  </p>
-  <p><b><a href="https://stepbystep.school">Step By Step, Noida</a></b></p>
-</footer>
-      </body>
-  <script src="/js/script9.js"></script>
-  <script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/committeescroll1.js"></script>
-  <script src="js/readmore.js"></script>
-  <script src="js/responsive.js"></script>
-  <script src="js/scrollcolour.js"></script>
-  <script src="js/scrollunderline.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/validate.js"></script>
-  <script src="js/js2/jquery.js"></script>
-  <script src="js/js2/bootstrap.min.js"></script>
-  <script src="js/js2/bootstrap-select.min.js"></script>
-  <script src="js/js2/jquery.validate.min.js"></script>
-  <script src="js/js2/owl.carousel.min.js"></script>
-  <script src="js/js2/isotope.js"></script>
-  <script src="js/js2/jquery.magnific-popup.min.js"></script>
-  <script src="js/js2/js2/waypoints.min.js"></script>
-  <script src="js/js2/jquery.counterup.min.js"></script>
-  <script src="js/js2/wow.min.js"></script>
-  <script src="js/js2/jquery.easing.min.js"></script>
-  <script src="js/js2/custom.js"></script>
+  <footer>
+    <p><i class="fa fa-copyright"></i> Copyright <strong>SBSMUN 2021</strong>
+      <span class="credits"> · Design by Aryan Nath, Aabir Fauzan, Shauryaveer Chaudhry, Arhaan Garg </span>
+    </p>
+    <p><b><a href="https://stepbystep.school">Step By Step, Noida</a></b></p>
+  </footer>
+</body>
+<script src="/js/script9.js"></script>
+<script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/committeescroll1.js"></script>
+<script src="js/readmore.js"></script>
+<script src="js/responsive.js"></script>
+<script src="js/scrollcolour.js"></script>
+<script src="js/scrollunderline.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/js2/jquery.js"></script>
+<script src="js/js2/bootstrap.min.js"></script>
+<script src="js/js2/bootstrap-select.min.js"></script>
+<script src="js/js2/jquery.validate.min.js"></script>
+<script src="js/js2/owl.carousel.min.js"></script>
+<script src="js/js2/isotope.js"></script>
+<script src="js/js2/jquery.magnific-popup.min.js"></script>
+<script src="js/js2/js2/waypoints.min.js"></script>
+<script src="js/js2/jquery.counterup.min.js"></script>
+<script src="js/js2/wow.min.js"></script>
+<script src="js/js2/jquery.easing.min.js"></script>
+<script src="js/js2/custom.js"></script>
 
 
 </html>
