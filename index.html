@@ -89,7 +89,7 @@
               /* Hidden by default */
               position: fixed;
               /* Stay in place */
-              z-index: 1;
+              z-index: 10;
               /* Sit on top */
               padding-top: 100px;
               /* Location of the box */
@@ -116,6 +116,43 @@
               border: 1px solid #888;
               width: 60%;
               box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              -webkit-animation-name: animatetopone;
+              -webkit-animation-duration: 0.4s;
+              animation-name: animatetopone;
+              animation-duration: 0.4s
+            }
+            .modal2 {
+              display: none;
+              /* Hidden by default */
+              position: fixed;
+              /* Stay in place */
+              z-index: 10;
+              /* Sit on top */
+              padding-top: 100px;
+              /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%;
+              /* Full width */
+              height: 100%;
+              /* Full height */
+              overflow: auto;
+              /* Enable scroll if needed */
+              background-color: rgb(0, 0, 0);
+              /* Fallback color */
+              background-color: rgba(0, 0, 0, 0.4);
+              /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content2 {
+              position: relative;
+              background-color: #FFEACA;
+              margin: auto;
+              padding: 0;
+              border: 1px solid #888;
+              width: 60%;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
               -webkit-animation-name: animatetop;
               -webkit-animation-duration: 0.4s;
               animation-name: animatetop;
@@ -123,6 +160,29 @@
             }
 
             /* Add Animation */
+            @-webkit-keyframes animatetopone {
+              from {
+                top: -300px;
+                opacity: 0
+              }
+
+              to {
+                top: 0;
+                opacity: 1
+              }
+            }
+
+            @keyframes animatetopone {
+              from {
+                top: -300px;
+                opacity: 0
+              }
+
+              to {
+                top: 0;
+                opacity: 1
+              }
+            }
             @-webkit-keyframes animatetop {
               from {
                 top: -300px;
@@ -153,6 +213,12 @@
               text-decoration: none;
               cursor: pointer;
             }
+            .close1:hover,
+            .close1:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
 
             .modal-header {
               padding: 2px 16px;
@@ -165,6 +231,21 @@
             }
 
             .modal-footer {
+              padding: 2px 16px;
+              background-color: #C84B31;
+              color: white;
+            }
+            .modal-header2 {
+              padding: 2px 16px;
+              background-color: #C84B31;
+              color: white;
+            }
+
+            .modal-body2 {
+              padding: 2px 16px;
+            }
+
+            .modal-footer2 {
               padding: 2px 16px;
               background-color: #C84B31;
               color: white;
@@ -214,26 +295,26 @@
 
             <script>
               // Get the modal
-              var modal = document.getElementById("myModal");
+              var mod = document.getElementById("myModal");
 
               // Get the button that opens the modal
-              var btn = document.getElementById("myBtn");
+              var button = document.getElementById("myBtn");
 
               // Get the <span> element that closes the modal
               var span = document.getElementsByClassName("close")[0];
 
               // When the user clicks the button, open the modal 
-              btn.onclick = function () {
-                modal.style.display = "block";
+              button.onclick = function () {
+                mod.style.display = "block";
               }
-
 
               // When the user clicks anywhere outside of the modal, close it
-              window.onclick = function (event) {
-                if (event.target == modal) {
-                  modal.style.display = "none";
+
+                mod.onclick = function (event) {
+                  if (event.target == mod) {
+                    mod.style.display = "none";
+                  }
                 }
-              }
             </script>
 
         </div>
@@ -363,11 +444,13 @@
             today. It is in the hands of members of the International Press to use their voice to its greatest capacity-
             to be desolating, domineering; pivotal. An integral part of the Model United Nations, each edition of the
             Fourth Estate brings to the general reader an understanding of all that is discussed and debated behind
-            closed doors.</p>
+            closed doors.<br><br>
+            Editors: Diva Dutta Gupta and Kavya Sharma<br>
+            Sub-Editor: Tanisha Bhatnagar</p>
           <p>&nbsp;</p>
           <div class="common-button">
             <button><a href="./docs/Fourth_Estate.pdf" target="_blank">Pre-Con</a></button>
-            <button><a href="index.html#fourth-estate" target="_blank">Day 1</a></button>
+            <button><a href="./docs/Day1TheFourthEstate.pdf" target="_blank">Day 1</a></button>
             <button><a href="index.html#fourth-estate" target="_blank">Day 2</a></button>
           </div>
         </div>
@@ -385,46 +468,41 @@
       </div>
       <div class="schedule-content">
         <div class="common-button">
-          <p>Nadia Shahidi: Training of Cartoonists</p>
-          <p>Nandini Agarwal and Suryaansh Jain: Training of Delegates.</p>
+          <p>Nadia Shahidi for Training of Cartoonists.</p>
+          <p>Nandini Agarwal and Suryaansh Jain for Training of Delegates.</p>
           <h2>&nbsp;</h2>
           <link rel="stylesheet" href="css/css2/style3.css">
           <link rel="stylesheet" href="css/css2/responsive.css">
 
-          <button id="myBtn1">USG-Conference Services</button>
+          <button id="btn2">USG-Conference Services</button>
 
           <!-- The Modal -->
-          <div id="myModal1" class="modal">
+          <div id="modal2" class="modal2">
 
             <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
+            <div class="modal-content2">
+              <div class="modal-header2">
                 <h2>USG-Conference Services</h2>
               </div>
-              <div class="modal-body">
-                <h3>Overall Incharge</h3>
-                <p>Nadia Narain</p>
+              <div class="modal-body2">
                 <h1>&nbsp;</h1>
-                <h3>United Nations Environment Programme</h3>
-                <p>Ananya Agarwal</p>
-                <p>Tanmay Sethi</p>
+                <h3>Overall Incharge: <span style="font-weight:lighter">Nadia Narain</span></h3>
+                <h1>&nbsp;</h1>
+                <h3>United Nations Environment Programme: <span style="font-weight:lighter">Ananya Agarwal, Tanmay Sethi</span></h3>
                 <h2>&nbsp;</h2>
-                <h3>United Nations Security Council</h3>
-                    <p>Shiv Khanna</p>
+                <h3>United Nations Security Council: <span style="font-weight:lighter">Shiv Khanna</span></h3>
                 <h2>&nbsp;</h2>
-                <h3>Ad hoc Committee</h3>
-                  <p>Tanisha Garg</p>
+                <h3>Ad hoc Committee: <span style="font-weight:lighter">Tanisha Garg</span></h3>
                 <h2>&nbsp;</h2>
-                <h3>European Parliament's Committee on Foreign Affairs</h3>
-                  <p>Kaira Bhaskar</p>
-                  <p> Rhea Nanda</p>
+                <h3>European Parliament's Committee on Foreign Affairs: <span style="font-weight:lighter">Kaira Bhaskar, Rhea Nanda</span></h3>
                 <h2>&nbsp;</h2>
-                <h3>President Ashraf Ghani's War Cabinet</h3>
-                  <p>Myraa Ramchandani</p>
+                <h3>President Ashraf Ghani's War Cabinet: <span style="font-weight:lighter">Myraa Ramchandani</span></h3>
+                
                 <h2>&nbsp;</h2>
-                  
+                <h3>USG-Art and Design: <span style="font-weight:lighter">Anaanya Poddar</span></h3>
+                <h1>&nbsp;</h1>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer2">
                 <h3>&nbsp;</h3>
               </div>
             </div>
@@ -433,26 +511,28 @@
 
           <script>
             // Get the modal
-            var modal = document.getElementById("myModal1");
+            var modal = document.getElementById("modal2");
 
             // Get the button that opens the modal
-            var btn = document.getElementById("myBtn1");
+            var btn = document.getElementById("btn2");
 
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("close")[1];
 
             // When the user clicks the button, open the modal 
             btn.onclick = function () {
               modal.style.display = "block";
             }
 
-
             // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
+
+              modal.onclick = function (event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
               }
-            }
+
+            var x = 0
           </script>
   </section>
 
@@ -522,7 +602,7 @@
         </div><!-- /.testimonials-carousel-style-one -->
       </div>
       <h1>&nbsp;</h1>
-      <p><i class="fa fa-copyright"></i> Copyright <strong>SBSMUN 2021</strong>
+      <p><i class="fa fa-copyright"></i> Copyright <strong>IntraSBSMUN 2021</strong>
         <span class="credits"> · Design by Aryan Nath, Aabir Fauzan, Shauryaveer Chaudhry, Arhaan Garg </span>
       </p>
       <p><b><a href="https://stepbystep.school">Step By Step, Noida</a></b></p>
