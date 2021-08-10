@@ -144,6 +144,9 @@ header {
   margin: 2%;
   text-align: center;
 }
+.img2{
+  display: flex;
+}
 .image-container img {
   object-fit: cover;
   object-position: center;
@@ -178,6 +181,9 @@ header {
 
 /* Responsive */
 @media screen and (max-width: 600px) {
+  .img2{
+    display: block;
+  }
   .common-heading {
     font-size: 200%;
   }
